@@ -1,0 +1,37 @@
+.for-who
+
+	&-item
+		+offset('b', 45px)
+
+		&__content
+			font-size: 15px
+
+		+max(sm)
+			&__image-cover
+				img
+					max-height: 100px
+
+		+min(sm)
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			+offset('b', 4vmax)
+
+			&__image-cover
+				height: 100px
+				flex-basis: 100px
+				img
+					max-height: 100%
+
+			&__content
+				flex-basis: 0
+				flex-grow: 1
+				padding-left: 30px
+
+		+min(md)
+			&__image-cover
+				height: auto
+				flex-basis: 140px
+
+			&__content
+				max-width: 270px
