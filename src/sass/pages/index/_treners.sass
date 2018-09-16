@@ -76,7 +76,16 @@
 			margin-bottom: 15px
 
 		&__header
+			+r()
+			padding-bottom: 45px
 			text-align: center
+			z-index: 1
+			&:before
+				content: ""
+				+a(null, 0, 0)
+				+size(190px, 120px)
+				+bgi('../img/treners-item-way.png')
+				z-index: -1
 
 		&__content
 			+font('l')
