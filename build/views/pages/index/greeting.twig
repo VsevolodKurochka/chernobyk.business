@@ -3,7 +3,7 @@
 	set info = {
 		'logo': 'img/logo.png',
 		'title': 'БИЗНЕС-РАЗБОРЫ',
-		'subtitle': '4-недельный практический интенсив<br>от Katana Group и Виталия Бихунова',
+		'subtitle': '4-недельный практический интенсив <br>от Katana Group и Виталия Бихунова',
 		'motivation': 'Запрограммируй себя на приумножение дохода'
 	}
 %}
@@ -15,12 +15,14 @@
 		<h2 class="greeting__subtitle">{{info.subtitle|raw}}</h2>
 		<h1 class="greeting__title">{{info.title}}</h1>
 		<h3 class="greeting__subtitle greeting__subtitle_uppercase">{{info.motivation}}</h3>
-		{{
-			landing.button(
-				'button',
-				'greeting__btn',
-				'Забронировать место'
-			)
-		}}
+		<div class="greeting__btn-outer">
+			{{
+				landing.button(
+					'button',
+					'greeting__btn',
+					'Забронировать место'
+				)
+			}}
+		</div>
 	</div>
 </section>

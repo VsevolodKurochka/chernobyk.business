@@ -1,6 +1,47 @@
 .greeting
+	+p-y(60px, 150px)
 	+blackout('../img/greeting-bg.jpg', linear-gradient( -122deg, rgb(40,83,193) 0%, rgb(30,27,83) 100%))
 	text-align: center
 
+	+min(md)
+		padding-bottom: 300px
+
+	&__logo
+		margin-bottom: 30px
+		+min(md)
+			margin-bottom: 60px
+
+	@at-root
+		%greeting-title
+			line-height: 1.1
+			font-weight: normal
+
 	&__subtitle
-		font-size: 1.85vmax
+		@extend %greeting-title
+		font-size: 20px
+
+		&_uppercase
+			text-transform: uppercase
+
+		+max(sm)
+			br
+				display: none
+		+min(md)
+			font-size: 1.85vmax
+
+	&__title
+		@extend %greeting-title
+		
+		+m-y(30px, 15px)
+		+font('b')
+		font-size: 50px
+
+		+min(md)
+			+m-y(60px, 20px)
+			font-size: 5.5vmax
+
+	&__btn
+		&-outer
+			margin-top: 30px
+			+min(md)
+				margin-top: 45px
