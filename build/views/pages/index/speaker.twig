@@ -1,23 +1,47 @@
-{% import 'pages/index/macros.twig' as macros %}
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set info = {
+		'title': 'ГЛАВНЫЙ ТРЕНЕР<br> ИНТЕНСИВА —<br><b>ВИТАЛИЙ БИХУНОВ</b>',
+	}
+%}
+{%
+	set speaker = {
+		"image": "img/speaker.jpg",
+		"name": "Виталий Бихунов",
+		"list": [
+			"Владелец ТМ “МегаТурник”, спортсмен, режиссер.",
+			"Автор самого узнаваемого бренда в мире настенных спортивных комплексов.",
+			"Владелец KatanaGroup Production (миллионы просмотров на YouTube).",
+			"Cертифициорованный бизнес-тренер IPS и Бизнес Молодость",
+			"Ученик Тони Роббинса и Ицхака Пинтосевича"
+		]
+	}
+%}
 <section class="speaker" id="section-speaker">
 	<div class="container">
-		{{macros.sectionHeader(null, "<strong>Спикер</strong><br> мероприятия", "speaker__title")}}
+		{{
+			landing.header(
+				'speaker__header',
+				{
+					"text": info.title,
+					"class": "happen__title"
+				}
+			)
+		}}
 		<div class="row speaker__row">
 			<div class="col-12 col-sm-6 col-md-5 speaker__item">
 				<div class="speaker__item-inner">
-					<img src="img/speaker.jpg" alt="Виталий Бихунов" class="speaker__item-image">
+					<img src="{{speaker.image}}" alt="{{speaker.name}}" class="speaker__item-image">
 				</div>
 			</div>
 			<div class="col-12 col-sm-6 col-md-5 speaker__item">
 				<div class="speaker__item-inner">
 					<div class="speaker__item-content">
-						<p class="speaker__item-name">Виталий Бихунов</p>
+						<p class="speaker__item-name">{{speaker.name}}</p>
 						<ul class="speaker__item-list">
-							<li>— Владелец ТМ “МегаТурник”, спортсмен, режиссер.</li>
-							<li>— Автор самого узнаваемого бренда в мире настенных спортивных комплексов. </li>
-							<li>— Владелец KatanaGroup Production (миллионы просмотров на YouTube). </li>
-							<li>— Cертифициорованный бизнес-тренер IPS и Бизнес Молодость</li>
-							<li>— Ученик Тони Роббинса и Ицхака Пинтосевича</li>
+							{% for li in speaker.list %}
+								<li>- {{li}}</li>
+							{% endfor %}
 						</ul>
 					</div>
 				</div>
