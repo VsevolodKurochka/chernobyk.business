@@ -1,0 +1,10 @@
+=blackout($bg, $gradient, $opacity: 0.7)
+	+r()
+	+bgi($bg)
+	color: $color-white
+	&:before
+		content: ""
+		+a(0, null, null, 0)
+		+size(100%)
+		background-image: $gradient
+		opacity: $opacity
