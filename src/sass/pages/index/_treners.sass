@@ -31,7 +31,10 @@
 		margin-bottom: 10px
 		+font('l')
 		line-height: 1.2
-		font-size: 20px
+		font-size: 16px
+
+		+min(sm)
+			font-size: 20px
 
 		+min(md)
 			font-size: 22px
@@ -49,8 +52,11 @@
 	&__number
 		+font('b')
 		color: $color-brand-1
-		font-size: 100px
+		font-size: 70px
 		line-height: 1
+
+		+min(md)
+			font-size: 100px
 
 	&__info
 		+r()
@@ -96,11 +102,15 @@
 				opacity: 0
 
 	&-item
+
 		margin: 15px
 		padding: 30px 15px
 		border-radius: 5px
 		background-color: $color-white
 		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+		+max(md)
+			max-width: 250px
+			+m-x(auto)
 		+min(md)
 			padding: 40px
 
