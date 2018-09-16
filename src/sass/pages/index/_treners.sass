@@ -60,5 +60,46 @@
 					margin-left: 30px
 					margin-top: 30px
 
-	&__container
-		margin-top
+	&-item
+		margin: 15px
+		padding: 30px 15px
+		border-radius: 5px
+		background-color: $color-white
+		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+		+min(md)
+			padding: 40px
+
+		&__name
+			+font('b')
+			text-align: center
+			font-size: 20px
+			margin-bottom: 15px
+
+		&__header
+			text-align: center
+
+		&__content
+			+font('l')
+			font-size: 15px
+
+		&__list
+			+m-y(15px)
+
+			+min(sm)
+				min-height: 40px
+
+			li
+				padding-left: 15px
+				&:before
+					top: 10px
+					left: 0
+					+size(10px, 1px)
+					+bgc($color-general)
+
+		&__prices
+			list-style: none
+			li
+				display: block
+			span
+				display: inline-block
+				min-width: 60px

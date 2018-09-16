@@ -42,7 +42,7 @@ $(document).ready(function () {
 			},
 			1200: {
 				items: 3,
-				margin: 60
+				margin: 30
 			}
 		}
 	});

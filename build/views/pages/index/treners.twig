@@ -40,6 +40,26 @@
 			"a": "1100",
 			"b": "1500",
 			"f": "2500"
+		},
+		{
+			"name": "Павел Кравченко",
+			"image": "img/team-3.png",
+			"niche": [
+				"производство моющих средств"
+			],
+			"a": "1100",
+			"b": "1500",
+			"f": "2500"
+		},
+		{
+			"name": "Павел Кравченко",
+			"image": "img/team-3.png",
+			"niche": [
+				"производство моющих средств"
+			],
+			"a": "1100",
+			"b": "1500",
+			"f": "2500"
 		}
 	]
 %}
@@ -58,23 +78,23 @@
 	<div class="treners__container container">
 		<div class="treners__carousel owl-carousel" id="treners-carousel">
 			{% for trener in team %}
-				<div class="treners__item">
-					<p class="treners__item-name">{{trener.name}}</p>
-					<div class="treners__item-header">
+				<div class="treners-item">
+					<p class="treners-item__name">{{trener.name}}</p>
+					<div class="treners-item__header">
 						<img src="{{trener.image}}" alt="{{trener.name}}">
 					</div>
-					<div class="treners__item-content">
+					<div class="treners-item__content">
 						<p class="b">Ниша:</p>
-						<ul class="list treners__item-list">
+						<ul class="list treners-item__list">
 							{% for niche in trener.niche %}
 								<li>{{niche}}</li>
 							{% endfor %}
 						</ul>
-						<p class="treners__item-prices">
-							<span>Точка А</span> — {{trener.a}}
-							<span>Точка Б</span> — {{trener.b}}
-							<span>Факт</span> — {{trener.f}}
-						</p>
+						<ul class="treners-item__prices">
+							<li><span class="b">Точка А</span> — {{trener.a}} $</li>
+							<li><span class="b">Точка Б</span> — {{trener.b}} $</li>
+							<li><span class="b">Факт</span> — {{trener.f}} $</li>
+						</ul>
 					</div>
 				</div>
 			{% endfor %}
