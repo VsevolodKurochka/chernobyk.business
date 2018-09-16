@@ -22,15 +22,23 @@
 {% block nav %}
 {% endblock %}
 {% block content %}
-	{% include 'pages/index/greeting.twig' %}
-	{% include 'pages/index/treners.twig' %}
-	{% include 'pages/index/happen.twig' %}
-	{% include 'pages/index/connect-1.twig' %}
-	{% include 'pages/index/for-who.twig' %}
-	{% include 'pages/index/about.twig' %}
-	{% include 'pages/index/connect-2.twig' %}
-	{% include 'pages/index/activities.twig' %}
-	{% include 'pages/index/important.twig' %}
+	{%
+		set sections = [
+			'greeting',
+			'treners',
+			'happen',
+			'connect-1',
+			'for-who',
+			'about',
+			'connect-2',
+			'activities',
+			'important',
+			'reviews'
+		]
+	%}
+	{% for section in sections %}
+		{% include "pages/index/#{section}.twig" %}
+	{% endfor %}
 {% endblock %}
 
 {% block footer %}

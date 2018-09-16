@@ -58,5 +58,17 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$('#reviews-carousel').owlCarousel({
+		loop: false,
+		nav: true,
+		items: 1,
+		dots: false,
+		navContainerClass: 'reviews__carousel-nav',
+		navClass: [
+			"reviews__carousel-btn reviews__carousel-btn_prev btn btn_brand-1 effect effect_bounce-bottom", 
+			"reviews__carousel-btn reviews__carousel-btn_next btn btn_brand-1 effect effect_bounce-bottom"
+		],
+	});
 	
 });	
