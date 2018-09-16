@@ -1,0 +1,64 @@
+.treners
+	+r()
+	z-index: 1
+
+	margin-top: -120px
+
+	+min(md)
+		margin-top: -150px
+
+	&__title
+		margin-bottom: 30px
+		text-align: center
+		color: $color-white
+
+		+min(md)
+			margin-bottom: 60px
+
+	&__subtitle
+		margin-bottom: 10px
+		+font('l')
+		line-height: 1.2
+		font-size: 20px
+
+		+min(md)
+			font-size: 22px
+		
+		&_b
+			+font('b')
+
+		&_uppercase
+			text-transform: uppercase
+
+		&_large
+			+min(md)
+				font-size: 24px
+
+	&__number
+		+font('b')
+		color: $color-brand-1
+		font-size: 100px
+		line-height: 1
+
+	&__info
+		+w(95%)
+		+bgc($color-white)
+		margin: 0 auto 45px
+		padding: 30px 15px
+		border-radius: 5px
+		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+
+		+min(sm)
+			+p-y(45px)
+			display: flex
+			justify-content: center
+
+		&-column
+
+			&_2
+				+min(sm)
+					margin-left: 30px
+					margin-top: 30px
+
+	&__container
+		margin-top

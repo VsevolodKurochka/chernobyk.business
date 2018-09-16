@@ -2,20 +2,82 @@
 {%
 	set info = {
 		'title': "СЕРТИФИЦИРОВАННЫЕ ТРЕНЕРЫ KATANA GROUP",
-		'subtitle': "ПОМОГЛИ УЖЕ СВЫШЕ<br><span>100+</span>",
+		'subtitle': "ПОМОГЛИ УЖЕ СВЫШЕ",
+		'number': '100+',
 		'who': "ПРЕДПРИНИМАТЕЛЯМ<br>И ФРИЛАНСЕРАМ",
 		'future': "<span class='b'>Перейти</span> на новый<br>уровень <span class='b'>заработка</span>"
 	}
+%}
+{%
+	set team = [
+		{
+			"name": "Дмитрий Гречко",
+			"image": "img/team-1.png",
+			"niche": [
+				"производство скалодромов",
+				"производство мебели"
+			],
+			"a": "3000",
+			"b": "6000",
+			"f": "7075"
+		},
+		{
+			"name": "Чернобук Оксана",
+			"image": "img/team-2.png",
+			"niche": [
+				"интернет-маркетинг"
+			],
+			"a": "3000",
+			"b": "3000",
+			"f": "3450"
+		},
+		{
+			"name": "Павел Кравченко",
+			"image": "img/team-3.png",
+			"niche": [
+				"производство моющих средств"
+			],
+			"a": "1100",
+			"b": "1500",
+			"f": "2500"
+		}
+	]
 %}
 <section class="treners treners_negative">
 	<h3 class="treners__title">{{info.title}}</h3>
 	<div class="treners__info">
 		<div class="treners__info-column treners__info-column_1">
-			<p class="treners__subtitle treners__subtitle_uppercase">{{info.subtitle|raw}}</p>
+			<p class="treners__subtitle treners__subtitle_uppercase treners__subtitle_b">{{info.subtitle|raw}}</p>
+			<p class="treners__number">{{info.number}}</p>
 		</div>
 		<div class="treners__info-column treners__info-column_2">
 			<p class="treners__subtitle treners__subtitle_uppercase">{{info.who|raw}}</p>
 			<p class="treners__subtitle treners__subtitle_large">{{info.future|raw}}</p>
+		</div>
+	</div>
+	<div class="treners__container container">
+		<div class="treners__carousel owl-carousel" id="treners-carousel">
+			{% for trener in team %}
+				<div class="treners__item">
+					<p class="treners__item-name">{{trener.name}}</p>
+					<div class="treners__item-header">
+						<img src="{{trener.image}}" alt="{{trener.name}}">
+					</div>
+					<div class="treners__item-content">
+						<p class="b">Ниша:</p>
+						<ul class="list treners__item-list">
+							{% for niche in trener.niche %}
+								<li>{{niche}}</li>
+							{% endfor %}
+						</ul>
+						<p class="treners__item-prices">
+							<span>Точка А</span> — {{trener.a}}
+							<span>Точка Б</span> — {{trener.b}}
+							<span>Факт</span> — {{trener.f}}
+						</p>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

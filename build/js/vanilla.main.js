@@ -178,87 +178,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 		return Modal;
 	}();
 
-	var Navigation = function () {
-		function Navigation() {
-			var _this2 = this;
-
-			_classCallCheck(this, Navigation);
-
-			this.prefix = '';
-			this.navigation = document.getElementById('js-navigation');
-			this.menu = document.getElementById('js-navigation-menu');
-			this.hamburger = document.getElementById('js-nav-hamburger');
-			this.addition = document.getElementById('js-nav-addition-button-1');
-			this.links = '.nav__menu-item-link';
-
-			this.linksScroll();
-
-			if (exists(this.navigation)) {
-				this.navigationScroll();
-			}
-
-			if (exists(this.hamburger)) {
-				this.hamburger.addEventListener('click', function (e) {
-					return _this2.hamburgerClick(e);
-				});
-			}
-
-			if (exists(this.addition)) {
-				this.addition.addEventListener('click', function (e) {
-					return _this2.additionClick(e);
-				});
-			}
-		}
-
-		_createClass(Navigation, [{
-			key: 'checkScrollY',
-			value: function checkScrollY() {
-				window.scrollY > 0 ? addClass(this.navigation, 'nav_scrolled') : removeClass(this.navigation, 'nav_scrolled');
-			}
-		}, {
-			key: 'navigationScroll',
-			value: function navigationScroll() {
-				var _this3 = this;
-
-				this.checkScrollY();
-				window.addEventListener("scroll", function () {
-					return _this3.checkScrollY();
-				});
-			}
-		}, {
-			key: 'hamburgerClick',
-			value: function hamburgerClick(el) {
-
-				toggleClass(this.hamburger, 'active');
-				toggleClass(this.menu, 'nav__menu_active');
-			}
-		}, {
-			key: 'additionClick',
-			value: function additionClick(el) {
-
-				toggleClass(this.addition, 'active');
-			}
-		}, {
-			key: 'linksScroll',
-			value: function linksScroll() {
-				var _this4 = this;
-
-				new SmoothScroll(this.links, {
-					after: function after() {
-						removeClass(_this4.hamburger, 'active');
-						removeClass(_this4.menu, 'nav__menu_active');
-					}
-				});
-			}
-		}]);
-
-		return Navigation;
-	}();
-
 	document.addEventListener("DOMContentLoaded", function () {
 
 		new Modal();
-		new Navigation();
+		//new Navigation();
 
 		var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
