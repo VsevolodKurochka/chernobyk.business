@@ -5,6 +5,7 @@ $themeFormDesign: "new"
 
 	&__row
 		+r()
+		z-index: 1
 
 	&_block &__row
 		+offset('b', 15px)
@@ -31,16 +32,27 @@ $themeFormDesign: "new"
 	@if $themeFormDesign == "new"
 		&__control
 			+input-default()
-			padding: 15px
+			+font('l')
+			padding: 15px 45px
 			border: none
+			background-color: transparent
+			color: $color-white
+			+placeholder()
+				text-transform: uppercase
+				color: $color-white
 
 			&:focus
 				+placeholder()
 					color: transparent
 
+		&__image
+			+a(50%, null, null, 5px)
+			transform: translateY(-50%)
+			z-index: -1
+
 		&__line
 			+a(null, null, 0, 0)
-			+size(0, 1px)
+			+size(0, 2px)
 			+transition()
 			+bgc($color-brand-1)
 
@@ -51,8 +63,11 @@ $themeFormDesign: "new"
 			&:before
 				content: ""
 				+a(null, null, 0, 0)
-				+size(100%, 1px)
-				+bgc(transparentize($color-black, 0.8))
+				+size(100%, 2px)
+				+bgc(transparentize($color-white, 0.8))
+
+		&__row_submit
+			margin-top: 30px
 
 	@else
 		&__control
