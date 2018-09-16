@@ -1,11 +1,23 @@
 .treners
+	@at-root
+		%treners-rectangle
+			background-color: rgb(234, 245, 252)
+			opacity: 0.8
+			height: 130px
+			width: 50vw
+
 	+r()
 	z-index: 1
-	
 	+m-y(-120px, 50px)
 
 	+min(md)
 		margin-top: -150px
+
+	&:before
+		content: ""
+		+a(null, 0, -30px)
+		z-index: -1
+		@extend %treners-rectangle
 
 	&__title
 		margin-bottom: 30px
@@ -41,12 +53,20 @@
 		line-height: 1
 
 	&__info
+		+r()
 		+w(95%)
 		+bgc($color-white)
 		margin: 0 auto 45px
 		padding: 30px 15px
 		border-radius: 5px
 		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+		z-index: 1
+
+		&:before
+			content: ""
+			+a(null, null, -100px, 30px)
+			z-index: -1
+			@extend %treners-rectangle
 
 		+min(sm)
 			+p-y(45px)
