@@ -4,7 +4,7 @@
 	{{form.button('button', "#{default} #{class}", text, {'data-action': 'modal', 'data-open': '#modal-form'} ) }}
 {% endmacro %}
 
-{% macro sectionHeader(headerClass, title, subtitle) %}
+{% macro header(headerClass, title, subtitle) %}
 	<div class="section__header {{headerClass}}">
 		{% if title %}
 			<h3 class="section__title {{title.class}}">{{title.text|raw}}</h3>
