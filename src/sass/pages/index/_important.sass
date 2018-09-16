@@ -1,8 +1,25 @@
 .important
+	+r()
 	+p-y(60px)
-	+blackout('../img/important-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.8)
+	+blackout('../img/important-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.7)
+	background-position: bottom
+	z-index: 1
 	+min(md)
 		+p-y(6vmax)
+
+	&__rectangle
+		+a()
+		z-index: -1
+
+		&_1
+			top: 5vw
+			left: 10vw
+			+rectangle(rgb(234, 245, 252), 0.6, 55vw, 8vw)
+
+		&_2
+			bottom: 25%
+			right: 0
+			+rectangle(rgb(234, 245, 252), 0.3, 75vw, 100px)
 
 	&__header
 		+min(md)
