@@ -1,3 +1,7 @@
 =font($type)
-	@if $type = 'r'
-		font-family: 'Roboto', sans-serif
+	@if $type == 'l'
+		font-family: 'Museo Sans 300 Light'
+	@elseif $type == 'm'
+		font-family: 'Museo Sans 500 Medium'
+	@elseif $type == 'b'
+		font-family: 'Museo Sans 700 Bold'

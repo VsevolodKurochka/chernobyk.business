@@ -2,8 +2,8 @@
 {% extends 'layouts/base.twig' %}
 
 {% block meta %}
-	{% set title = 'Title' %}
-	{% set description = 'description' %}
+	{% set title = 'БИЗНЕС-РАЗБОРЫ. Запрограммируй себя на приумножение дохода' %}
+	{% set description = '4-недельный практический интенсив от Katana Group и Виталия Бихунова' %}
 	{% set image = 'img/logo.png' %}
 	{% set url = 'url' %}
 	{{ macros.meta(title, description, image, url) }}
@@ -18,8 +18,10 @@
 	{{ macros.js('js/vanilla.main.js') }}
 {% endblock %}
 
+{% block nav %}
+{% endblock %}
 {% block content %}
-	{% include 'pages/index/section-1.twig' %}
+	{% include 'pages/index/greeting.twig' %}
 {% endblock %}
 
 {% block footer %}
