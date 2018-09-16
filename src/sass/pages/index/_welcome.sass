@@ -1,0 +1,28 @@
+.welcome
+	+p-y(60px)
+	+blackout('../img/welcome-bg.jpg', false, false, false, true )
+		
+	+min(md)
+		+p-y(6vmax)
+
+	&:before
+		content: ""
+		+a(0, 0)
+		+size(100%, 25%)
+		background-image: linear-gradient(to top,rgba(0, 0, 0, 0),#000)
+
+		+min(md)
+			height: 250px
+
+	&__title
+		margin-bottom: 45px
+		+min(md)
+			margin-bottom: 60px
+			font-size: 48px
+	
+	&__subtitle
+		+font('l')
+		text-transform: uppercase
+		
+		+min(md)
+			font-size: 24px

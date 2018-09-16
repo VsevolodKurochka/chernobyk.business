@@ -30,7 +30,7 @@
 	</label>
 {% endmacro %}
 
-{% macro formRowInput(type, name, placeholder, image) %}
+{% macro row(type, name, placeholder, image) %}
 	<div class="form__row form__row_line">
 		<img src="{{image}}" alt="Image for {{name}} input" class="form__image">
 		<input type="{{type}}" class="form__control" name="{{name}}" placeholder="{{placeholder}}" required="required">

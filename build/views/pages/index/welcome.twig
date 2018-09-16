@@ -1,27 +1,36 @@
-{% import 'pages/index/macros.twig' as macros %}
-
-{% set title = "<strong>Приходи</strong> — и включи программу <strong>“Увеличение дохода”</strong>" %}
-{% set subtitle = "<strong>для участия</strong> Заполните ваши<br>данные и нажмите на <strong>кнопку<br>“оплатить заказ”</strong>" %}
-
-<section class="welcome" id="section-payment">
+{% import 'macros/macros.landing.twig' as landing %}
+{% import 'macros/macros.form.twig' as form %}
+{% 
+	set info = {
+		"title": "<b>НАЧНИ</b> 4-НЕДЕЛЬНЫЙ <b>ОТСЧЕТ К</b> ТВОЕЙ ФИНАНСОВОЙ <b>СВОБОДЕ</b>",
+		"subtitle": "Регистрируйся — и получи 2-кратное увеличение дохода за 1 месяц"
+	}
+%}
+<section class="welcome">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-6 col-md-6">
-				{{macros.sectionHeader('welcome__header', title, "welcome__title", subtitle, 'welcome__subtitle')}}
+				{{
+					landing.header(
+						'welcome__header',
+						{
+							"text": info.title,
+							"class": "welcome__title"
+						},
+						{
+							"text": info.subtitle,
+							"class": "welcome__subtitle"
+						}
+					)
+				}}
 			</div>
 			<div class="hidden visible-md visible-lg col-md-1 col-lg-1"></div>
 			<div class="col-12 col-sm-6 col-md-4">
 				<form action="#" class="form form_white form_block" method="POST">
 					<div class="form__content">
-						<div class="form__row">
-							{{macros.formControl('check1', 'checks', 'Пакет Gold - 950 грн', 'checked')}}
-							{{macros.formControl('check2', 'checks', 'Пакет Platinum - 5000 грн')}}
-						</div>
-						{{macros.formRowInput('text', 'name', 'Имя', '../img/icon-avatar.png')}}
-						{{macros.formRowInput('email', 'email', 'Email', '../img/icon-email.png')}}
-						{{macros.formRowInput('phone', 'phone', 'Телефон', '../img/icon-phone.png')}}
-
-						{{macros.formRowSubmit('Оплатить ЗАКАЗ', 'form__row_submit-center')}}
+						{{form.row('text', 'name', 'Имя', '../img/icon-avatar.png')}}
+						{{form.row('email', 'email', 'Email', '../img/icon-email.png')}}
+						{{form.row('phone', 'phone', 'Телефон', '../img/icon-phone.png')}}
 					</div>
 				</form>
 			</div>
