@@ -3,3 +3,37 @@
 	+blackout('../img/important-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.8)
 	+min(md)
 		+p-y(6vmax)
+
+	&__header
+		+min(md)
+			display: flex
+			align-items: center
+
+	&__title
+		line-height: 1
+		+font('b')
+		+min(md)
+			margin-right: 30px
+			font-size: 10.7vmax
+
+	&__title + &__subtitle
+		+min(md)
+			margin-top: 0
+
+	&__items
+		margin-bottom: 45px
+
+	&-step
+		&__number
+			color: $color-brand-2
+			+font('b')
+			font-size: 40px
+			+min(md)
+				font-size: 60px
+
+		&__content
+			font-size: 14px
+			+font('l')
+
+			+min(sm)
+				min-height: 120px
