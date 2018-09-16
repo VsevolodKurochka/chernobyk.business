@@ -1,17 +1,14 @@
 .treners
-	@at-root
-		%treners-rectangle
-			background-color: rgb(234, 245, 252)
-			opacity: 0.8
-			height: 130px
-			width: 50vw
-
 	+r()
 	z-index: 1
 	+m-y(-120px, 50px)
 
 	+min(md)
 		margin-top: -150px
+
+	@at-root
+		%treners-rectangle
+			+rectangle(rgb(234, 245, 252), 0.8, 50vw, 130px)
 
 	&:before
 		content: ""

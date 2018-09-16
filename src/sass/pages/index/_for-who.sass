@@ -1,4 +1,21 @@
 .for-who
+	+r()
+	z-index: 1
+	&:before,
+	&:after
+		content: ""
+		+a()
+		z-index: -1
+
+	&:before
+		top: 0
+		left: 35%
+		+rectangle(rgb(234, 245, 252), 0.7, 18vw, 50vw)
+
+	&:after
+		bottom: 30px
+		right: 0
+		+rectangle(rgb(234, 245, 252), 0.7, 75vw, 150px)
 
 	&-item
 		+offset('b', 45px)
