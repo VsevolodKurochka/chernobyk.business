@@ -2,7 +2,7 @@
 {%
 	set info = {
 		"title": "<b>КАК ПРОХОДЯТ</b><br>ЖИВЫЕ ЗАНЯТИЯ",
-		"subtitle": "LIVE",
+		"subtitle": "<span>LIVE</span>",
 		"content": [
 			"Раз в неделю тебе предстоит встречаться с тренерами и коллегами по курсу в уютном ресторане Киева.",
 			"Виталий Бихунов и команда аттестованных бизнес-тренеров будут отмечать твой прогресс и делиться советами для достижения финансовой цели.",
@@ -11,7 +11,7 @@
 		]
 	}
 %}
-<section class="activities">
+<section class="section activities">
 	<img src="img/activities-img.jpg" alt="{{info.title|striptags}}" class="activities__image">
 	<div class="container">
 		<div class="row">
@@ -29,18 +29,21 @@
 						}
 					)
 				}}
-				<div class="activities__content">
-					{% for p in info.content %}
-						<p>{{p}}</p>
-					{% endfor %}
+				<div class="activities__body">
+					<div class="activities__content">
+						{% for p in info.content %}
+							<p>{{p}}</p>
+						{% endfor %}
+					</div>
+					{{
+						landing.button(
+							'button',
+							'activities__button',
+							'Забронировать место'
+						)
+					}}
 				</div>
-				{{
-					landing.button(
-						'button',
-						'activities__button',
-						'Забронировать место'
-					)
-				}}
+				
 			</div>
 		</div>
 	</div>
