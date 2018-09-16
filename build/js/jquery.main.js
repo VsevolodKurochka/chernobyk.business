@@ -35,14 +35,15 @@ $(document).ready(function () {
 		items: 1,
 		dots: false,
 		navContainerClass: 'treners__carousel-nav',
+		navClass: ["treners__carousel-btn treners__carousel-btn_prev btn btn_brand-1 effect effect_bounce-bottom", "treners__carousel-btn treners__carousel-btn_next btn btn_brand-1 effect effect_bounce-bottom"],
 		responsive: {
 			1025: {
 				items: 3,
-				margin: 30
+				margin: 15
 			},
 			1200: {
 				items: 3,
-				margin: 30
+				margin: 15
 			}
 		}
 	});

@@ -1,8 +1,8 @@
 .treners
 	+r()
 	z-index: 1
-
-	margin-top: -120px
+	
+	+m-y(-120px, 50px)
 
 	+min(md)
 		margin-top: -150px
@@ -59,6 +59,21 @@
 				+min(sm)
 					margin-left: 30px
 					margin-top: 30px
+
+	&__carousel
+		+min(sm)
+			+p-x(45px)
+		&-nav
+			display: flex
+			justify-content: space-between
+			+a(50%, null, null, 0)
+			+w(100%)
+			transform: translateY(-50%)
+		&-btn
+			+size(45px)
+			border-radius: 100%
+			&.disabled
+				opacity: 0
 
 	&-item
 		margin: 15px
