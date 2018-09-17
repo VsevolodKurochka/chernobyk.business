@@ -26,6 +26,9 @@
 			display: flex
 			align-items: center
 
+			&_thx
+				justify-content: space-between
+
 	&__title
 		line-height: 1
 		+font('b')
@@ -33,9 +36,18 @@
 			margin-right: 30px
 			font-size: 10.7vmax
 
-	&__title + &__subtitle
+	&__title + &__subtitle,
+	&__thx-title + &__thx-subtitle
 		+min(md)
 			margin-top: 0
+
+	&__thx
+		&-subtitle
+			text-transform: uppercase
+			+min(md)
+				max-width: 50%
+			+min(lg)
+				max-width: 35%
 
 	&__items
 		margin-bottom: 45px
@@ -54,3 +66,11 @@
 
 			+min(sm)
 				min-height: 120px
+
+	&__content
+		+font('l')
+		+min(md)
+			font-size: 1.5vmax
+		p
+			+offset('b', 30px)
+			
