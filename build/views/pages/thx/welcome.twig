@@ -2,11 +2,10 @@
 {% import 'macros/macros.form.twig' as form %}
 {% 
 	set info = {
-		"title": "<b>НАЧНИ</b> 4-НЕДЕЛЬНЫЙ <b>ОТСЧЕТ К</b> ТВОЕЙ ФИНАНСОВОЙ <b>СВОБОДЕ</b>",
-		"subtitle": "Регистрируйся — и получи 2-кратное увеличение дохода за 1 месяц"
+		"title": "<b>Достигни финансовой цели</b>,которая откладывалась много лет, <b>всего за 1 месяц</b>"
 	}
 %}
-<section class="welcome welcome_1">
+<section class="welcome welcome_2">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-6 col-md-6">
@@ -15,11 +14,7 @@
 						'welcome__header',
 						{
 							"text": info.title,
-							"class": "welcome__title"
-						},
-						{
-							"text": info.subtitle,
-							"class": "welcome__subtitle b"
+							"class": "welcome__thx-title"
 						}
 					)
 				}}
@@ -32,7 +27,7 @@
 						{{form.row('email', 'email', 'Ваш e-mail', '../img/icon-email.png')}}
 						{{form.row('phone', 'phone', 'Ваш телефон', '../img/icon-phone.png')}}
 						<div class="form__row form__row_submit">
-							{{ form.button('submit', 'form__submit btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top', 'Узнать стоимость') }}
+							{{ form.button('submit', 'form__submit btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top', 'Оплатить') }}
 						</div>
 					</div>
 				</form>

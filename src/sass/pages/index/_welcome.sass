@@ -1,19 +1,10 @@
 .welcome
 	+p-y(30px)
-	+blackout('../img/welcome-bg.jpg', false, false, false, true )
 	z-index: 1
+
 	+min(sm)
 		+p-y(6vmax)
-
-	&:before
-		content: ""
-		+a(0, 0)
-		+size(100%, 25%)
-		background-image: linear-gradient(to top,rgba(0, 0, 0, 0),#000)
-		z-index: -2
-		+min(md)
-			height: 250px
-
+	
 	&:after
 		content: ""
 		+a(null, 0, 0)
@@ -26,7 +17,26 @@
 			+size(48%, 80%)
 			right: 0
 			top: 0
+	
+	&_1
+		+blackout('../img/welcome-bg.jpg', false, false, false, true )
+		&:before
+			content: ""
+			+a(0, 0)
+			+size(100%, 25%)
+			background-image: linear-gradient(to top,rgba(0, 0, 0, 0),#000)
+			z-index: -2
+			+min(md)
+				height: 250px
+	
+	&_2
+		+blackout('../img/welcome-bg-2.jpg', false, false, false, true )
+		background-position: top
+		+min(sm)
+			+p-y(12vmax, 10vmax)
 
+			&:after
+				top: 50px
 
 	&__title
 		margin-bottom: 45px
@@ -40,3 +50,8 @@
 		
 		+min(md)
 			font-size: 24px
+
+	&__thx
+		&-title
+			+min(sm)
+				font-size: 2.5vmax
