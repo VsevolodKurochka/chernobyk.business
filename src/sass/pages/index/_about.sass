@@ -13,6 +13,14 @@
 		margin-bottom: 45px
 
 	&-item
+		+max(sm)
+			display: flex
+			flex-wrap: wrap
+			flex-direction: row-reverse
+			justify-content: flex-end
+			align-items: center
+			+offset('b', 30px)
+
 		+min(md)
 			margin-right: 60px
 
@@ -21,14 +29,18 @@
 			font-size: 18px
 			text-transform: uppercase
 			color: $color-white
+			+max(sm)
+				margin-left: 15px
 			+min(md)
 				font-size: 20px
 				min-height: 50px
 
 		&__number
 			line-height: 1
-			font-size: 140px
+			font-size: 70px
 			+font('b')
+			+min(sm)
+				font-size: 140px
 			+min(md)
 				font-size: 170px
 
@@ -40,10 +52,13 @@
 				font-size: 220px
 
 		&__content
+			+max(sm)
+				flex-basis: 100%
 			font-size: 16px
 
 	&__content
 		+font('l')
+		font-size: 14px
 		p
 			+offset('b', 15px)
 
