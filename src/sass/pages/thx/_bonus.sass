@@ -2,10 +2,12 @@
 	text-align: center
 	&__video
 		margin-bottom: 30px
+		+min(md)
+			width: 75%
 		&-iframe
 			+size(100%, 150px)
 			+min(md)
-				+size(75%, 250px)
+				+h(250px)
 
 			+min(lg)
 				+h(400px)
