@@ -6,6 +6,9 @@
 	+min(md)
 		margin-top: -150px
 
+	&__title
+		+font('b')
+
 	&__content
 		+r()
 		+w(95%)
@@ -69,11 +72,15 @@
 	&__button
 		width: 100%
 		text-align: center
+
 		span
-			font-size: 75%
+			font-size: 60%
+			+font('l')
 
 		+min(md)
-			min-width: 350px
+			line-height: 1
+			font-size: 22px
+			width: 80%
 
 	&__image
 		+max(sm)
