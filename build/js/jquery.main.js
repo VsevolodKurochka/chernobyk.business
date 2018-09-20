@@ -56,4 +56,10 @@ $(document).ready(function () {
 		navContainerClass: 'reviews__carousel-nav',
 		navClass: ["reviews__carousel-btn reviews__carousel-btn_prev btn btn_brand-1 effect effect_bounce-bottom", "reviews__carousel-btn reviews__carousel-btn_next btn btn_brand-1 effect effect_bounce-bottom"]
 	});
+
+	$('[data-action="modal"]').click(function () {
+		var text = $(this).text();
+		var open = $(this).attr('data-open');
+		$(open).find('button[type="submit"]').text(text);
+	});
 });
