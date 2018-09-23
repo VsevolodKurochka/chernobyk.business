@@ -1,8 +1,7 @@
 {% import 'macros/macros.landing.twig' as landing %}
 {%
 	set info = {
-		'title': "СЕРТИФИЦИРОВАННЫЕ ТРЕНЕРЫ KATANA GROUP",
-		'subtitle': "ПОМОГЛИ УЖЕ СВЫШЕ",
+		'title': "СЕРТИФИЦИРОВАННЫЕ ТРЕНЕРЫ KATANA GROUP<br><span>ПОМОГЛИ УЖЕ СВЫШЕ</span>",
 		'number': '100+',
 		'who': "ПРЕДПРИНИМАТЕЛЯМ<br>И ФРИЛАНСЕРАМ",
 		'future': "<span class='b'>Перейти</span> на новый<br>уровень <span class='b'>заработка</span>"
@@ -65,10 +64,9 @@
 	]
 %}
 <section class="treners treners_negative">
-	<h3 class="treners__title">{{info.title}}</h3>
+	<h3 class="treners__title">{{info.title|raw}}</h3>
 	<div class="treners__info">
 		<div class="treners__info-column treners__info-column_1">
-			<p class="treners__subtitle treners__subtitle_uppercase treners__subtitle_b">{{info.subtitle|raw}}</p>
 			<p class="treners__number">{{info.number}}</p>
 		</div>
 		<div class="treners__info-column treners__info-column_2">
