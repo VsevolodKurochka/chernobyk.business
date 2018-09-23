@@ -16,18 +16,28 @@
 		z-index: -1
 		@extend %treners-rectangle
 
+	&__header
+		margin-bottom: 20px
+		+min(sm)
+			text-align: center
+		+min(md)
+			margin-bottom: 45px
+
 	&__title
-		margin-bottom: 30px
-		text-align: center
-		color: $color-white
+		font-size: 20px
+		+font('b')
+		margin-bottom: 5px
+
+		+min(sm)
+			font-size: 30px
 
 		+min(md)
-			margin-bottom: 60px
+			font-size: 2vmax
 
-			span
-				font-size: 3vmax
+	&__title + &__subtitle
+		margin-top: 5px
 
-	&__subtitle
+	&__caption
 		margin-bottom: 10px
 		+font('l')
 		line-height: 1.2
@@ -77,9 +87,15 @@
 		+min(sm)
 			+p-y(45px)
 			display: flex
+			flex-wrap: wrap
 			justify-content: center
 
 		&-column
+
+			&_0
+				+min(sm)
+					flex-basis: 100%
+					text-align: center
 
 			&_2
 				+min(sm)
