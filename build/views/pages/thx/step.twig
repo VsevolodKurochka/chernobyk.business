@@ -4,18 +4,45 @@
 		"title": "ОПЛАТА",
 		"subtitle": "ШАГ 2",
 		"price_title": "Стоимость участия — ",
-		"price_old": "$680",
-		"price_new": "$350",
-		"content": [
-			"- Помощь в постановке бизнес-цели.",
-			"- 5 живых встреч с экспертами.",
-			"- Индивидуальные домашние задания.",
-			"- Ежедневная обратная связь от сертифицированных тренеров Катана Групп.",
-			"- Поддержка в тестировании стратегий и достижении целей.",
-			"- Закрытый чат в Telegram",
-		],
-		"footer": "* Оплати участие сейчас<br>и получи бонус",
-		"button": "Оплатить<br><span>по спец.цене $350</span>"
+    "standart":{
+      "title": "Пакет Стандарт",
+      "subtitle": "(для стартаперов и предпринимателей<br>с доходом <b>ниже $2000</b> в месяц)",
+  		"price_old": "$680",
+  		"price_new": "$350",
+  		"content": [
+        "- Помощь в постановке бизнес-цели.",
+        "- 5 живых встреч с экспертами.",
+        "- Индивидуальные домашние задания.",
+        "- Ежедневная обратная связь от сертифицированных тренеров Катана Групп.",
+        "- Поддержка в тестировании стратегий и достижении целей.",
+        "- Закрытый чат в Telegram",
+        "- Постоянное сопровождение тренера для достижения цели"
+  		],
+  		"footer": "* Оплати участие сейчас<br>и получи бонус",
+  		"button": "Оплатить<br><span>по спец.цене $350</span>"
+    },
+    "business":{
+      "title": "Пакет бизнес",
+      "subtitle": "(для предпринимателей с доходом<br> <b>выше $2000</b> в месяц)",
+      "price_old": "$1200",
+      "price_new": "$500",
+      "content": [
+        "
+        - Помощь в постановке бизнес-цели. <br>
+        - 5 живых встреч с экспертами. <br> 
+        - Индивидуальные домашние задания. <br>
+        - Ежедневная обратная связь от сертифицированных тренеров Катана Групп.<br>
+        - Поддержка в тестировании стратегий и достижении целей.<br>
+        - Закрытый чат в Telegram <br>
+        - Постоянное сопровождение тренера  для достижения цели <br>
+        ",
+        "<span class='bold'>- Проработка стратегий масштабирования и систематизации бизнеса. </span>",
+        "<span class='bold'>- Окружение успешных людей, с которыми  ты создаёшь сильную команду. </span>",
+        "<span class='bold'>- Консультация по созданию конверсионных автоворонок от эксперта по маркетингу</span>",
+      ],
+      "footer": "* Оплати участие сейчас<br>и получи бонус",
+      "button": "Оплатить<br><span>по спец.цене $500</span>"
+    }
 	}
 %}
 <section class="step">
@@ -34,17 +61,34 @@
 				}
 			)
 		}}
-		<div class="step__body">
-			<p class="step__price">{{info.price_title}} <del>{{info.price_old}}</del> <b>{{info.price_new}}</b></p>
-			<p class="b">Сюда входят:</p>
-			<ul class="step__list list">
-				{% for li in info.content %}
-					<li>{{li}}</li>
-				{% endfor %}
-			</ul>
-			<p class="step__footer">{{info.footer|raw}}</p>
-			<a href="#" class="step__button btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top">{{info.button|raw}}</a>
-		</div>
+    <div class="row step__row">
+  		<div class="col-12 col-sm-6 col-lg-5 step__body">
+        <p class="step__body-title">{{info.standart.title}}</p>
+        <p class="step__body-subtitle">{{info.standart.subtitle|raw}}</p>
+  			<p class="step__body-price">Стоимость участия — {{info.standart.price_title}} <del>{{info.standart.price_old}}</del> <b>{{info.standart.price_new}}</b></p>
+  			<p class="b">Сюда входят:</p>
+  			<ul class="step__body-list list">
+  				{% for li in info.standart.content %}
+  					<li>{{li}}</li>
+  				{% endfor %}
+  			</ul>
+  			<p class="step__body-footer">{{info.standart.footer|raw}}</p>
+  			<a href="#" class="step__body-button btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top">{{info.standart.button|raw}}</a>
+  		</div>
+      <div class="col-12 col-sm-6 col-lg-5 step__body step__body_business">
+        <p class="step__body-title">{{info.business.title}}</p>
+        <p class="step__body-subtitle">{{info.business.subtitle|raw}}</p>
+        <p class="step__body-price">Стоимость участия —  <del>{{info.business.price_old}}</del> <b>{{info.business.price_new}}</b></p>
+        <p class="b">Сюда входят:</p>
+        <ul class="step__body-list list">
+          {% for li in info.business.content %}
+            <li>{{li|raw}}</li>
+          {% endfor %}
+        </ul>
+        <p class="step__body-footer">{{info.business.footer|raw}}</p>
+        <a href="#" class="step__body-button btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top">{{info.business.button|raw}}</a>
+      </div>
+    </div>
 		
 	</div>
 </section>
